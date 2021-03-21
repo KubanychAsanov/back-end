@@ -8,16 +8,16 @@ class News{
         this.title = title
         this.discription = discription
         this.img = img
-        this.id = null
+        this.id = uuid()
     }
 
     toJSON(){
-        return JSON.stringify({
+        return {
             title: this.title,
             discription: this.discription,
             img: this.img,
             id: this.id
-        })
+        }
     }
 
     async save(){
@@ -54,7 +54,11 @@ class News{
                 }
             ) 
         })
+    }
 
+    static async getById(id){
+        const news = await News.getAll()
+        return news.find(c => c.id === id)
     }
 }
 
