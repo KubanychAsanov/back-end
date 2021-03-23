@@ -1,4 +1,4 @@
-<h1>Редактировать {{news.title}}</h1>
+<h3>Редактировать {{news.title}}</h3>
 
 <form action="/news/edit" method="POST">
     <div class="input-field">
@@ -7,12 +7,12 @@
         <span class="helper-text" data-error="Введите тему новости"></span>
     </div>
     <div class="input-field">
-        <input id="discription" name="discription" type="text" class="validate" required value="{{news.discription}}">
-        <label for="discription">Описание</label>
+        <input id="description" name="description" type="text" class="validate" required value="{{news.description}}">
+        <label for="description">Описание</label>
         <span class="helper-text" data-error="Введите описание новости"></span>
     </div>
     <div class="input-field">
-        <input id="img" name="img" type="text" class="validate" required  value="{{news.img}}">
+        <input id="img" name="img" type="text" class="validate" required value="{{news.img}}">
         <label for="img">URL картинки</label>
         <span class="helper-text" data-error="Введите URL картинки"></span>
     </div>

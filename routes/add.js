@@ -1,4 +1,4 @@
-const {Router} = require('express')
+const { Router } = require('express')
 const router = Router()
 const News = require('../models/news_model')
 
@@ -10,11 +10,21 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', async (req, res) => {
-    const news = new News(req.body.title, req.body.discription, req.body.img)
-    
-    await news.save()
 
-    res.redirect('/news')
+    try {
+        const news = await News.create({
+            title: req.body.title,
+            description: req.body.description,
+            img: req.body.img
+        })
+        res.status(201);
+        res.redirect('/news')
+    } catch (e) {
+        console.log(e)
+        res.status(500).json({
+            massage: 'Server error'
+        })
+    }
 })
 
 module.exports = router

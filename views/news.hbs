@@ -1,24 +1,27 @@
-<h1>Новости</h1>
+<h3>Новости</h3>
 {{#if news.length}}
-{{#each news}}
+
 <div class="row">
+  {{#each news}}
   <div class="col s6 offset-s3">
     <div class="card">
-      <div class="card-image">
+      <div class="card-image ">
         <img src="{{img}}" alt="{{title}}">
       </div>
       <div class="card-content">
         <span class="card-title">{{title}}</span>
-        <p class="discription">{{discription}}</p>
+        <p class="description">{{description}}</p>
       </div>
       <div class="card-action actions">
         <a href="/news/{{id}}">Открыть новости</a>
         <a href="/news/{{id}}/edit?allow=true">Редактировать</a>
+        <a href="/news/{{id}}/delete?allow=true">Удалить</a>
       </div>
     </div>
   </div>
+  {{/each}}
+  
 </div>
-{{/each}}
 {{else}}
 <p>Новостей пока нет</p>
 {{/if}}

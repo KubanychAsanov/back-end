@@ -1,20 +1,28 @@
 .nav-wrapper{
     padding: 0 3rem;
+    background-color: cadetblue;
 }
-.news-item{
+img{
+    max-height: 300px;
+}
+.news_item{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.news-item h1{
+.news_item h1{
     margin-bottom: 2rem;
 }
 
-.news-item img{
+.news_item img{
     max-width: 600px;
     height: auto;
 }
-.news-item .discription{
+.news_item .description{
     font-size: 2.5rem;
+}
+.btn-primary{
+    position: absolute;
+    right: 250px;
 }
