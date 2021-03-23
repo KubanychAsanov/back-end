@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const sequelize = require('../database')
+const sequelize = require('../config/db.config')
 const path = require('path')
 
 const news = sequelize.define('News', {
