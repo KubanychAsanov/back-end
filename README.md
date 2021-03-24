@@ -44,7 +44,7 @@ npm clone https://github.com/KubanychAsanov/back-end.git
 # this command will clone this project
 ```
 
-To run this project, run:
+To run this project you have to install all dependencies, run:
 
 ```bash
 npm install 
