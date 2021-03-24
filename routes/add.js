@@ -10,7 +10,6 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', async (req, res) => {
-
     try {
         const news = await News.create({
             title: req.body.title,
